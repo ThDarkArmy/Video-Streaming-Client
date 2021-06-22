@@ -1,24 +1,29 @@
-import {POST_VIDEO, DELETE_VIDEO, UPDATE_VIDEO, GET_VIDEO, GET_ALL_VIDEOS, PLAY_VIDEO} from './videoTypes';
+import {POST_VIDEO, DELETE_VIDEO, UPDATE_VIDEO, GET_VIDEO, GET_ALL_VIDEOS, PLAY_VIDEO, LOAD_VIDEO, LOAD_ALL_VIDEOS} from './videoTypes';
 
-export default postVideo = (video)=>{
+// post a video to the server
+export const postVideo = (video)=>{
     return {
-        action: POST_VIDEO,
+        type: POST_VIDEO,
         payload: video
     }
 }
 
-export default deleteVideo = (videoId) => {
+
+// delete a video by id
+export const deleteVideo = (videoId) => {
     return {
-        action: DELETE_VIDEO,
+        type: DELETE_VIDEO,
         payload: {
             id: videoId
         }
     }
 }
 
-export default updateVideo = (videoId, video) => {
+
+// update a video by id
+export const updateVideo = (videoId, video) => {
     return {
-        action: UPDATE_VIDEO,
+        type: UPDATE_VIDEO,
         payload: {
             id: videoId,
             video: video
@@ -26,24 +31,48 @@ export default updateVideo = (videoId, video) => {
     }
 }
 
-export default getVideo = (videoId) => {
+
+// get a specific video from server
+export const getVideo = (videoId) => {
     return {
-        action: GET_VIDEO,
+        type: GET_VIDEO,
         payload: {
             id: videoId
         }
     }
 }
 
-export default getAllVideos = () => {
+// load a video
+export const loadVideo = (video)=>{
     return {
-        action: GET_ALL_VIDEOS
+        type: LOAD_VIDEO,
+        payload: {
+            id: video
+        }
     }
 }
 
-export default playVideo = (videoId) => {
+// get all videos from server
+export const getAllVideos =  () => {
+    return{
+        type: GET_ALL_VIDEOS
+    }    
+}
+
+// load all videos
+export const loadAllVideos = (videos)=>{
+        return{
+            type: LOAD_ALL_VIDEOS,
+            payload: {
+                videos
+            }
+        }
+}
+
+// play an specific video
+export const playVideo = (videoId) => {
     return {
-        action: PLAY_VIDEO,
+        type: PLAY_VIDEO,
         payload: {
             id: videoId
         }
