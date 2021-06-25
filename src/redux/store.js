@@ -1,7 +1,7 @@
 import { createStore, applyMiddleware } from 'redux';
 import createSagaMiddleware from 'redux-saga';
-import rootReducer from './rootReducer';
-import {watcherSaga} from './saga/rootSaga';
+import rootReducer from '../reducers/rootReducer';
+import videoSagas from '../sagas/videoSagas';
 import { composeWithDevTools } from 'redux-devtools-extension';
 
 
@@ -11,6 +11,7 @@ const middlewares = [sagaMiddleware]
 
 const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(...middlewares)));
 
-sagaMiddleware.run(watcherSaga)
+videoSagas.map(videoSaga => sagaMiddleware.run(videoSaga));
+
 
 export default store;

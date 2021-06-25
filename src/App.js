@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Videos from './components/Videos';
+import Videos from './components/VideosList';
 
 
 const App = ()=> {

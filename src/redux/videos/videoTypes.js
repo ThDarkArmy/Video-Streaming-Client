@@ -1,9 +1,0 @@
-export const POST_VIDEO = "POST_VIDEO";
-export const UPDATE_VIDEO = "UPDATE_VIDEO";
-export const DELETE_VIDEO = "DELETE_VIDEO";
-export const GET_VIDEO = "GET_VIDEO";
-export const GET_ALL_VIDEOS = "GET_ALL_VIDEOS";
-export const GET_ALL_VIDEOS_SUCCEEDED = "GET_ALL_VIDEOS_SUCCEEDED"
-export const PLAY_VIDEO = "PLAY_VIDEO";
-export const LOAD_ALL_VIDEOS = "LOAD_ALL_VIDEOS";
-export const  LOAD_VIDEO = " LOAD_VIDEO";
