@@ -1,25 +1,37 @@
 import { combineReducers } from "redux";
-import * as Actions from "../actions/videoActions";
+import { Video } from "../constants";
 
-const videos = (state = [], action) => {
+const initialState = {
+  loading: false,
+  videos: [],
+  error: null
+}
+
+const videos = (state = initialState, action) => {
   switch (action.type) {
-    case Actions.POST_VIDEO:
+    case Video.GET_ALL: 
+      return { ...state, loading: true}
+    case Video.LOAD_ALL:
+      return {...state, videos: action.payload, loading:false}
+      
+    case Video.LOAD_BY_ID:
+      return {...state}
+
+    case Video.POST:
       return { ...state };
-    case Actions.DELETE_VIDEO:
+
+    case Video.POST_DESCRIPTION:
+      return {...state,};
+
+    case Video.UPDATE: 
+      return {...state};
+
+    case Video.UPDATE_THUMBNAIL:
+      return {...state};
+
+    case Video.DELETE:
       return { ...state };
-    case Actions.UPDATE_VIDEO:
-      return { ...state };
-    case Actions.GET_VIDEO:
-      return {};
-    case Actions.GET_ALL_VIDEOS_SUCCEEDED:
-      return action.payload;
-    case Actions.LOAD_ALL_VIDEOS:
-      return {
-        ...state,
-        videos: [...state.videos, action.payload.videos]
-      };
-    case Actions.PLAY_VIDEO:
-      return {};
+
     default:
       return state;
   }

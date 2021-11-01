@@ -1,36 +1,40 @@
 import { call, put, takeLatest } from "@redux-saga/core/effects";
-import * as VideoActions from "../actions/videoActions";
+import {Video} from '../constants'
 import VideoService from "../services/videoServices";
 
 function* handleGetAllVideos() {
   try {
     const data = yield call(VideoService.requestGetAllVideos);
-    console.log(data)
     yield put({
-      type: VideoActions.GET_ALL_VIDEOS_SUCCEEDED,
-      payload: data
+      type: Video.LOAD_ALL,
+      payload: data.videos
     });
   } catch (err) {
     console.log(err);
   }
 }
 
-function* handleGetVideo(action) {
+
+function* handleGetVideoById() {
   try {
     const data = yield call(VideoService.requestGetVideo);
-    // yield put();
+    yield put({
+      type: Video.LOAD_BY_ID,
+      payload: data.video
+    });
   } catch (err) {
     console.log(err);
   }
 }
 
+
 function* videoSaga() {
-  yield [
-    takeLatest(VideoActions.GET_ALL_VIDEOS, handleGetAllVideos),
-    takeLatest(VideoActions.GET_VIDEO, handleGetVideo)
-  ];
+  yield takeLatest(Video.GET_ALL, handleGetAllVideos);
+  yield takeLatest(Video.GET_BY_ID, handleGetVideoById);
+  //takeLatest(VideoActions.GET_VIDEO, handleGetVideo)
+  
 }
 
-export { handleGetAllVideos, handleGetVideo };
+// export { handleGetAllVideos, handleGetVideo };
 
 export default [videoSaga];
