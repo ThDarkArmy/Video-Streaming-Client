@@ -1,0 +1,114 @@
+{
+    "videos": [
+        
+        {
+            "views": 0,
+            "likes": 0,
+            "dislikes": 0,
+            "comments": [],
+            "_id": "618e2222a643b46464744512",
+            "videoPath": "videos\\618e2222a643b46464744512_video. 2 _ Official Trailer _ Netflix India",
+            "mimeType": "video/mp4",
+            "channel": "6152aad02d66b13bc8bc8220",
+            "createdAt": "2021-11-12T08:13:22.878Z",
+            "updatedAt": "2021-11-12T08:28:51.834Z",
+            "category": "Trailer",
+            "description": "The world's greatest heist comes to an end. Last season of Money Heist launching December 3rd, only on Netflix. \nFollow Netflix India on: Website: https://www.netflix.com/\nYouTube: http://bit.ly/NetflixIndiaYTInstagram: http://www.instagram.com/netflix_in \nFacebook: http://www.facebook.com/NetflixIN \nTwitter: http://twitter.com/netflixindia \n#MoneyHeist #LCDP5 #NetflixIndia",
+            "duration": 108.5,
+            "size": 18.21,
+            "thumbnailPath": "thumbnails\\618e2222a643b46464744512_thumbnail.jpg",
+            "thumbnailStreamingPath": "http://localhost:5678/thumbnails/618e2222a643b46464744512_thumbnail.jpg",
+            "title": "Money Heist: Part 5 Vol. 2 | Official Trailer | Dark Army India",
+            "videoStreamingPath": "http://localhost:5678/videostream/618e2222a643b46464744512"
+        },
+       
+       
+        
+        {
+            "views": 0,
+            "likes": 0,
+            "dislikes": 0,
+            "comments": [],
+            "_id": "618e27eea643b4646474451b",
+            "videoPath": "videos\\618e27eea643b4646474451b_video.mp4",
+            "mimeType": "video/mp4",
+            "channel": "6152aad02d66b13bc8bc8220",
+            "createdAt": "2021-11-12T08:38:06.137Z",
+            "updatedAt": "2021-11-12T08:46:52.182Z",
+            "category": "Trailer",
+            "description": "SUBSCRIBE to Zee Music Company https://bit.ly/2yPcBkS \nTo Stream & Download Full Song: \nJioSaavn - https://bit.ly/3aN1f0x \niTunes - https://apple.co/3v3MGPm \nApple Music - https://apple.co/3v3MGPm \nAmazon Prime Music - https://amzn.to/3AwS26F \nHungama - https://bit.ly/3lBiFTL \nSpotify - https://spoti.fi/3oY1vBS \nYouTube Music - https://bit.ly/3azRF0C \nResso - https://bit.ly/3v4DV7H \nNow available also on HiPi - https://z5.app/BznOrRpe \nSong: Suna Hai \nComposer: Jeet Gannguli \nSinger: Jubin Nautiyal \nLyricist: Rashmi Virag \nArrangers \nProgrammers: Aditya Dev \nActors: Vidyut Jammwal & Rukmini Maitra Production House: Sunshine Pictures Pvt Ltd \nDirector: Kanishk Varma",
+            "duration": 175.208984,
+            "size": 24.17,
+            "thumbnailPath": "thumbnails\\618e27eea643b4646474451b_thumbnail.jpg",
+            "thumbnailStreamingPath": "http://localhost:5678/thumbnails/618e27eea643b4646474451b_thumbnail.jpg",
+            "title": "Suna Hai - Sanak | Vidyut Jammwal & Rukmini Maitra | Jubin Nautiyal | Jeet Gannguli",
+            "videoStreamingPath": "http://localhost:5678/videostream/618e27eea643b4646474451b"
+        },
+       
+        
+        {
+            "views": 0,
+            "likes": 0,
+            "dislikes": 0,
+            "comments": [],
+            "_id": "618e2ae0df50a27084891452",
+            "videoPath": "videos\\618e2ae0df50a27084891452_video.mp4",
+            "mimeType": "video/mp4",
+            "channel": "6152aad02d66b13bc8bc8220",
+            "createdAt": "2021-11-12T08:50:40.620Z",
+            "updatedAt": "2021-11-12T08:53:22.182Z",
+            "category": "Song",
+            "description": "Ishq Mubarak Lyrics from Tum Bin 2 starring Neha Sharma, Aditya Seal & Aashim Gulati: The song is sung by Arijit Singh, music composed by Ankit Tiwari while lyrics are written by Manoj Muntashir. \nISHQ MUBARAK SONG INFO \nSinger : Arijit Singh \nAlbum : Tum Bin 2 \nLyricist : Manoj Muntashir \nMusic : Ankit Tiwari \nLanguage : Hindi \nMusic Label : T-Series Music",
+            "duration": 332.166992,
+            "size": 22.89,
+            "thumbnailPath": "thumbnails\\618e2ae0df50a27084891452_thumbnail.jpg",
+            "thumbnailStreamingPath": "http://localhost:5678/thumbnails/618e2ae0df50a27084891452_thumbnail.jpg",
+            "title": "Ishq Mubarak Full Video Song | Tum Bin 2 | Arijit Singh | Neha Sharma, Aditya Seal & Aashim Gulati | DarkArmy",
+            "videoStreamingPath": "http://localhost:5678/videostream/618e2ae0df50a27084891452"
+        },
+       
+        
+        {
+            "views": 0,
+            "likes": 0,
+            "dislikes": 0,
+            "comments": [],
+            "_id": "618e2c2ddf50a27084891458",
+            "videoPath": "videos\\618e2c2ddf50a27084891458_video.mp4",
+            "mimeType": "video/mp4",
+            "channel": "6152aad02d66b13bc8bc8220",
+            "createdAt": "2021-11-12T08:56:13.972Z",
+            "updatedAt": "2021-11-12T08:57:13.665Z",
+            "category": "Song",
+            "description": "Ishq Mubarak Lyrics from Tum Bin 2 starring Neha Sharma, Aditya Seal & Aashim Gulati: The song is sung by Arijit Singh, music composed by Ankit Tiwari while lyrics are written by Manoj Muntashir. \nISHQ MUBARAK SONG INFO \nSinger : Arijit Singh \nAlbum : Tum Bin 2 \nLyricist : Manoj Muntashir \nMusic : Ankit Tiwari \nLanguage : Hindi \nMusic Label : T-Series Music",
+            "duration": 212.24,
+            "size": 13.51,
+            "thumbnailPath": "thumbnails\\618e2c2ddf50a27084891458_thumbnail.jpg",
+            "thumbnailStreamingPath": "http://localhost:5678/thumbnails/618e2c2ddf50a27084891458_thumbnail.jpg",
+            "title": "Jitni Dafa - Lyrical | PARMANU | John Abraham , Diana | Yasser Desai & Jeet Gannguli | RashmiVirag | DarkArmy",
+            "videoStreamingPath": "http://localhost:5678/videostream/618e2c2ddf50a27084891458"
+        },
+       
+       
+        {
+            "views": 0,
+            "likes": 0,
+            "dislikes": 0,
+            "comments": [],
+            "_id": "618e2dbedf50a2708489145e",
+            "videoPath": "videos\\618e2dbedf50a2708489145e_video.mp4",
+            "mimeType": "video/mp4",
+            "channel": "6152aad02d66b13bc8bc8220",
+            "createdAt": "2021-11-12T09:02:54.834Z",
+            "updatedAt": "2021-11-12T09:03:03.975Z",
+            "category": "Song",
+            "description": "Bringing now the full Video of Blockbuster Song 'Tera Fitoor' from the Movie 'Genuis', starring Utkarsh Sharma & Ishita Chauhan Sung by Arijit Singh. \nStay updated with latest videos from Bollywood Hits, Subscribe on below link https://www.youtube.com/channel/UCCuZ... \nAvailable on: \nGaana: http://gaa.na/terafitoor \nSaavn: http://bit.ly/TeraFitoorOnSaavn \niTunes: http://bit.ly/TeraFitoorItunes \nSong Credits: \nSinger: Arijit Singh, \nMusic: Himesh Reshammiya, \nLyrics: Kumaar, \nEdit & Gfx : Nadeem Akhtar (Paperboyz Studioz) \nChoreography - Adil Shaikh \nMusic Produced by: Aditya Dev, Aditya Dev’s  \nMusic Assistant: Gaurav Singh \nHimesh Reshammiya’s Team: Suhas Parab, Subhash Parab & Priyesh Vakil.  \nSound Engineers: Salman Shaikh, Sakar Apte and Anudutt Shamain at HR Musik Studio. \nMixed and Mastered: by Salman Shaikh at HR Musik Studio.",
+            "duration": 140.56,
+            "size": 12.04,
+            "thumbnailPath": "thumbnails\\618e2dbedf50a2708489145e_thumbnail.jpg",
+            "thumbnailStreamingPath": "http://localhost:5678/thumbnails/618e2dbedf50a2708489145e_thumbnail.jpg",
+            "title": "Arijit Singh - Tera Fitoor Jabse Chadh Gaya Re | Genius | Utkarsh | Ishita | Himesh Reshammiya | DarkArmy",
+            "videoStreamingPath": "http://localhost:5678/videostream/618e2dbedf50a2708489145e"
+        }
+    ]
+}

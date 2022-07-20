@@ -2,9 +2,11 @@ import { createStore, applyMiddleware } from "redux";
 import createSagaMiddleware from "redux-saga";
 import rootReducer from "../reducers";
 import { composeWithDevTools } from "redux-devtools-extension";
-import videoSagas from "../sagas/videoSagas";
-import streamingSagas from "../sagas/streamingSagas";
+// import videoSagas from "../sagas/videoSagas";
+// import streamingSagas from "../sagas/streamingSagas";
 import createSagaMonitor from "@clarketm/saga-monitor";
+import thunk from 'redux-thunk'
+
 
 
 const defaultConfig = {
@@ -20,6 +22,7 @@ const defaultConfig = {
 };
 
 
+
 const config = {
   level: "log",
   effectTrigger: true,
@@ -32,11 +35,12 @@ const sagaMiddleware = createSagaMiddleware({ sagaMonitor:  createSagaMonitor(de
 
 const store = createStore(
   rootReducer,
-  composeWithDevTools(applyMiddleware(sagaMiddleware))
+  composeWithDevTools(applyMiddleware(thunk))
 );
 
-videoSagas.map(videoSaga => sagaMiddleware.run(videoSaga));
-streamingSagas.map(streamingSaga=>sagaMiddleware.run(streamingSaga));
+// videoSagas.map(videoSaga => sagaMiddleware.run(videoSaga));
+// streamingSagas.map(streamingSaga=>sagaMiddleware.run(streamingSaga));
+
 
 export default store;
 

@@ -10,9 +10,16 @@ import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles((theme)=>({
   root: {
     minHeight: 0,
-    [theme.breakpoints.up('xs')]: {
-      width: "96%",
+    [theme.breakpoints.up('sm')]: {
+      width: "94%",
       marginLeft: "6%"
+    },
+    [theme.breakpoints.between('xs','sm')]: {
+      width: "90%",
+      marginLeft: "10%"
+    },
+    [theme.breakpoints.down('xs')]: {
+      width: "100%",
     },
   },
   tab: { 

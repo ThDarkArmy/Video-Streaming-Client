@@ -7,6 +7,23 @@ const initialState = {
   error: null
 }
 
+
+const { FETCH_ALL_VIDEOS, FETCH_ALL_VIDEOS_SUCCESS, FETCH_ALL_VIDEOS_FAILURE } = Video;
+
+const fetchAllVideosReducer = (state=initialState, action) => {
+  switch(action.type){
+      case FETCH_ALL_VIDEOS:
+        return { ...state, loading: true}
+      case FETCH_ALL_VIDEOS_SUCCESS: 
+        return { ...state, videos: action.payload, loading: false}
+      case FETCH_ALL_VIDEOS_FAILURE:
+        return { ...state, error: action.error, loading: false}
+      default :
+        return state
+  }
+}
+
+
 const videos = (state = initialState, action) => {
   switch (action.type) {
     case Video.GET_ALL: 
@@ -38,5 +55,5 @@ const videos = (state = initialState, action) => {
 };
 
 export default combineReducers({
-  videos
+  videos, fetchAllVideosReducer
 });

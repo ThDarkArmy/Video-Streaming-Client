@@ -27,7 +27,7 @@ const Home = () => {
         <div className={classes.root}>
 
                 <div className={classes.header} >
-                    <Header/>
+                    <Header home={true}/>
                     <Divider variant="fullwidth"/>
                     <Divider variant="fullwidth"/>'
                     <Divider variant="fullwidth"/>

@@ -7,7 +7,6 @@ import {
   IconButton,
 } from "@material-ui/core";
 
-import BookmarkIcon from "@material-ui/icons/Bookmark";
 import FastForwardIcon from "@material-ui/icons/FastForward";
 import FastRewindIcon from "@material-ui/icons/FastRewind";
 import PlayArrowIcon from "@material-ui/icons/PlayArrow";
@@ -18,6 +17,7 @@ import Slider from "@material-ui/core/Slider";
 import Tooltip from "@material-ui/core/Tooltip";
 import FullScreenIcon from "@material-ui/icons/Fullscreen";
 import Popover from "@material-ui/core/Popover";
+import MoreIcon from '@mui/icons-material/Error';
 
 import { makeStyles, withStyles } from "@material-ui/styles";
 
@@ -118,7 +118,6 @@ export default forwardRef(({
   const classes = useStyles();
 
   const [anchorEl, setAnchorEl] = React.useState(null);
-  console.log("Volume:: ", volume)
   const handlePopover = (event) => {
     setAnchorEl(event.currentTarget);
   };
@@ -141,18 +140,14 @@ export default forwardRef(({
       >
         <Grid item>
           <Typography variant="h5" style={{ color: "#fff" }}>
-            Video Title
+            
           </Typography>
         </Grid>
 
         <Grid item>
-          <Button
-            variant="contained"
-            color="primary"
-            startIcon={<BookmarkIcon />}
-          >
-            Bookmark
-          </Button>
+          <IconButton>
+            <MoreIcon />
+          </IconButton>
         </Grid>
       </Grid>
 
@@ -196,7 +191,7 @@ export default forwardRef(({
         <Grid item>
           <Grid container alignItems="center" direction="row">
             <IconButton onClick={onPlayPause} className={classes.bottomIcons}>
-              {playing ? (<PauseIcon fontSize="large"/>) : (<PlayArrowIcon fontSize="large" />)}
+              {playing ? <PauseIcon fontSize="large"/> : <PlayArrowIcon fontSize="large" />}
             </IconButton>
 
             <IconButton onClick={onMute} className={classes.bottomIcons}>

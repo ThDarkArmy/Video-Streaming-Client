@@ -4,9 +4,7 @@ import videoServices from "../services/videoServices";
 
 
 function* handleGetVideo(action){
-   
     try{
-        
         const data = yield call(videoServices.requestGetVideo, action.payload.id)
         yield put({
             type: VideoStreaming.STREAM,

@@ -30,7 +30,9 @@ const Sidebar = () => {
                 alignItems="center"
                 justify="space-between">
                 <Grid item>
-                    <InboxIcon />
+                    <IconButton>
+                        <InboxIcon />
+                    </IconButton>
                 </Grid>
                 <Divider/>
                 <Grid item>

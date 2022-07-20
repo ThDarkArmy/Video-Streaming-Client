@@ -1,8 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { useLocation } from "react-router-dom";
-import { getVideo } from "../actions/streamingVideoActions";
-import PlayerControls from "./PlayerControls";
+import { useSelector } from "react-redux";
 import { Container } from "@material-ui/core";
 import { secondsToUTC } from "../functions/timeDateManipulator";
 
@@ -10,14 +7,13 @@ import ReactPlayer from "react-player";
 import { makeStyles } from "@material-ui/styles";
 import fullscreen from "screenfull";
 
-function useQuery() {
-  return new URLSearchParams(useLocation().search);
-}
 
 const useStyles = makeStyles({
+  root: {
+    // width:500
+  },
   playerWrapper: {
-    width: "100%",
-    position: "relative",
+    position: "relative"
   },
 });
 
@@ -44,7 +40,7 @@ const VideoPlayer = () => {
 
   // functions
   const handlePlayPause = ()=>{
-      setState({...state, playing:!state.playing})
+      setState({...state, playing: !state.playing})
   }
 
   const handleRewind = () => {
@@ -91,19 +87,17 @@ const VideoPlayer = () => {
 
   const handleProgress = (changeState) => {
 
-    if(count>2){
-      controlsRef.current.style.visibility = "hidden";
-      count = 0;
-    }
+    // if(count>2){
+    //   controlsRef.current.style.visibility = "hidden";
+    //   count = 0;
+    // }
 
-    if(controlsRef.current.style.visibility == "visible"){
-      count+=1
-    }
+    // if(controlsRef.current.style.visibility == "visible"){
+    //   count+=1
+    // }
 
-
-
-    if(!seeking)
-      setState({...state, ...changeState})
+    // if(!seeking)
+    //   setState({...state, ...changeState})
   }
 
   const handleSeekChange = (e, newValue) => {
@@ -124,7 +118,7 @@ const VideoPlayer = () => {
   }
 
   const handleMouseMove = () => {
-    controlsRef.current.style.visibility = "visible";
+    // controlsRef.current.style.visibility = "visible";
     count = 0
   }
 
@@ -134,19 +128,18 @@ const VideoPlayer = () => {
   const elapsedTime = timeDisplayFormat==='normal'? secondsToUTC(currentTime) : `-${secondsToUTC(duration - currentTime)}`
   const totalDuration = secondsToUTC(duration)
 
-  let query = useQuery();
-  const dispatch = useDispatch();
-  const id = query.get("video");
-  const { video, loading } = useSelector(
-    (state) => state.streamingVideoReducer.video
+
+  const {video, loading , error} = useSelector(
+    (state) => state.streamingVideoReducer
   );
 
   useEffect(() => {
-    dispatch(getVideo(id));
+
+    
   }, []);
 
   return (
-    <div>
+    <div className={classes.root}>
       {!loading && (
         <Container maxWidth="md">
           <div 
@@ -157,8 +150,8 @@ const VideoPlayer = () => {
             onKeyPress={e=>handleKeyPress(e)}
             >
             <ReactPlayer
-                ref={playerRef}
-              url={video.video.videoStreamingPath}
+              ref={playerRef}
+              url={video.videoStreamingPath}
               muted={muted}
               playing={playing}
               volume={volume}
@@ -166,8 +159,9 @@ const VideoPlayer = () => {
               onProgress={handleProgress}
               width={"100%"}
               height="100%"
+              controls={true}
             />
-            <PlayerControls 
+            {/* <PlayerControls 
                 ref={controlsRef}
                 key={video.video._id}
                 onPlayPause={handlePlayPause} 
@@ -189,14 +183,15 @@ const VideoPlayer = () => {
                 elapsedTime={elapsedTime}
                 totalDuration={totalDuration}
                 onChangeTimeDisplayFormat={handleTimeDisplayFormat}
-                />
-                
+                /> */}
           </div>
+         
         </Container>
       )}
     </div>
   );
 };
+
 
 
 export default VideoPlayer;

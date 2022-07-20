@@ -18,6 +18,7 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: 420,
     maxHeight: 320,
     borderRadius: 0,
+    //backgroundColor: "#001E3C",
   },
   media: {
     width: "100%",
@@ -66,7 +67,7 @@ const VideoCard = ({ videoData }) => {
             <MoreVertIcon />
           </IconButton>
         }
-        title={<Link to={'/watch?video='+_id} style={{ textDecoration: 'none', color: "#030303" }}>{title.substring(0,32)}</Link>}
+        title={<Link to={'/watch?video='+_id} style={{ textDecoration: 'none', color: "#030303" }}>{title.substring(0,50)}</Link>}
       subheader={channel.substring(0,19)}
       />
 

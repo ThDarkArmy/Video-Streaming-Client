@@ -15,3 +15,15 @@ export const secondsToUTC = (seconds) => {
 
     return `${mm}:${ss}`;
 }
+
+
+export const formatDate = (date) => {
+    let monthNames =["Jan","Feb","Mar","Apr",
+            "May","Jun","Jul","Aug",
+            "Sep", "Oct","Nov","Dec"];
+    date = new Date(date)
+    let formattedDate = monthNames[date.getMonth()-1]+" "+date.getDate()+", "+date.getFullYear()
+
+    return formattedDate;
+
+}

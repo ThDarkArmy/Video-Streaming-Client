@@ -1,4 +1,27 @@
+import axios from 'axios'
 import { Video } from "../constants";
+
+const BASE_URL = "http://localhost:5678/videos/all"
+
+const { FETCH_ALL_VIDEOS, FETCH_ALL_VIDEOS_SUCCESS, FETCH_ALL_VIDEOS_FAILURE  } = Video;
+
+
+export const fetchAllVideos = () => async (dispatch, getState) => {
+  dispatch({type: FETCH_ALL_VIDEOS})
+
+  try{
+    const response = await axios.get(BASE_URL)
+    if(response.data.success){
+      
+      dispatch({type: FETCH_ALL_VIDEOS_SUCCESS, payload: response.data.body})
+    }else{
+      throw response.data.error
+    }
+
+  }catch(err){
+    dispatch({type: FETCH_ALL_VIDEOS_FAILURE, error: err})
+  }
+}
 
 
 // get all videos
